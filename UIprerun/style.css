@@ -65,6 +65,16 @@ a img {
 /* Bellbook (Vervious 03-06-2012
 -------------------------------------------------------------- */
 
+body {
+	font-family: "helvetica neue",arial,sans-serif;
+	font-size: 0.7em;
+	color: #211922;
+}
+
+body a {
+	text-decoration: none;
+}
+
 div#header {
 	position: fixed;
 	z-index: 1;
@@ -100,7 +110,18 @@ div.book-listing {
 	}
 	
 	div.book-info {
-		padding: 20px;
+		padding: 10px;
+		line-height: 1.4em;
+	}
+	
+	.book-listing h2 { /*title */
+		font-size: 1.5em;
+		line-height: 1.7em;
+	}
+	
+	.book-listing h2 a { /* title link */
+		color: #211922;
+		text-decoration: underline;
 	}
 
 
