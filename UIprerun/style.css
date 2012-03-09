@@ -67,7 +67,7 @@ a img {
 
 body {
 	font-family: "helvetica neue",arial,sans-serif;
-	font-size: 0.7em;
+	font-size: 0.7em; 
 	color: #211922;
 }
 
@@ -79,24 +79,201 @@ div#header {
 	position: fixed;
 	z-index: 1;
 	top: 0px; left: 0px; right: 0px;
-	margin: 0px 60px 0px 60px;
-	padding: 10px 0 20px 0;
+	/*margin: 0px 60px 0px 60px;*/
+	margin: 0 auto;
+	width: 900px; /* real total width = 884px, the 900 is to cover up shadows */
+	padding: 48px 0 0px 0;
 	background-color: white;
-	border-bottom: 1px solid black;
-	height: 30px; /*preset… font size should be pretty flexible */
+	/*height: 60px;*/ /*preset height of #content-area*/
 }
+	
+	#header div#border-bottom {
+		position: absolute;
+		bottom: -1px;
+		left: 8px;
+		width: 884px;
+		height: 2px;
+		background: url(header/bottom-border.png) repeat-x bottom center;
+	}
+	
+	div#content-area {
+		margin: 10px auto;
+		width: 884px;
+		height: 42px;
+	}
+	
+	div#search-icon {
+		position: absolute;
+		top: 0; left: 0;
+		height: 40px;
+		width: 40px;
+		border: 1px solid #252525;
+		background: url(header/search-icon.png) no-repeat center center;
+	}
+	
+	form#search-form {
+		position: absolute;
+		left: 50px; bottom: 0px; height: 30px;
+		border-right: 1px solid  #c0c0c0;
+		padding: 0;
+	}
+	
+		#search-form input {
+			border: none;
+			height: 40px; margin-top: -10px;
+			padding-right: 8px;
+			font-size: 2.2em;
+			font-family: "HelveticaNeue-Light", Helvetica, Arial, sans-serif; 
+			color: #585858;
+			background: url(header/dashed-line.png) repeat-x left bottom;
+			width: 298px;
+		}
+		
+	div#menu-and-options {
+		position: absolute;
+		height: 30px;
+		right: 0px;
+		bottom: 0px;
+		width: 530px;
+		background-image: url(header/left-border.png), url(header/right-border.png);
+		background-repeat: no-repeat, no-repeat;
+		background-position: bottom left, bottom right;
+	}
+	
+		div#page-options {
+			position: absolute;
+			left: 2px; bottom: 0px;
+			height: 10px;
+			padding: 0 7px 8px 7px;
+			color: #8c8c8c;
+		}
+		
+			#page-options a {
+				margin-left: 5px;
+				color: #8c8c8c; 
+			}
+			
+			#page-options a:hover {
+				color: #67C2B4; 
+			}
+			
+			#page-options a.selected {
+				border: 1px dashed #84AFB0;
+				padding: 3px 4px 4px 4px;
+				color: #84AFB0;
+			}
+		
+		ul#menu {
+			position: absolute;
+			right: 2px; bottom: 0px;
+			padding: 0 7px 0px 7px;
+			color: #8c8c8c;
+		}
+			#menu li {
+				margin-left: 10px; margin-bottom: 0px;
+				padding: 0px;
+				list-style: none;
+				float: left;
+			}
+			
+				#menu li a {
+					display: block;
+					padding: 5px 0px 8px 0px;
+				}
+				
+				#menu li a:hover {
+					color: #67C2B4;
+				}
+		
+			#menu a,
+			#menu span {
+				color: #8c8c8c; 
+			}
+			
+			#menu li:hover a#profile-link {
+				color: #67C2B4; 
+			}
+			
+			#menu a#title-logo {
+				color: #0a6587
+			}
+			
+			#menu li#profile {
+			}
+			
+				#menu a#profile-link {
+					border-bottom: 1px dashed #8c8c8c;
+					padding-right: 15px;
+					padding-bottom: 7px;
+					padding-left: 6px;
+					background: url(header/drop-down-arrow.png) no-repeat right center;
+					cursor: pointer;
+				}
+				
+				#menu #profile:hover #profile-link {
+					border: none;
+					/*border-bottom: 1px dashed #67C2B4;*/
+					background: url(header/drop-down-arrow-highlighted.png) no-repeat right center;
+				}
+				
+					#profile ul#profile-nav {
+						position: absolute;
+						z-index: 2;
+						top: 100%; right: -40%;;
+						background: white;
+						display: none;
+						
+						border-top: 1px dashed #67C2B4;
+						border-bottom: 1px solid #c0c0c0;
+						border-right: 1px solid #c0c0c0;
+						border-left: 1px solid #c0c0c0;
+					}
+						
+						#profile-nav li {
+							margin: 0;
+							white-space: nowrap;
+							list-style: none;
+						}
+							
+						#profile-nav li a {
+							display: block;
+							padding: 10px 10px;
+						}
+						
+						#profile-nav li a:hover {
+							color: #67C2B4;
+						}
+					
+					#profile:hover ul#profile-nav {
+						display: block;
+					}
+					
+					
+
 
 div#content {
-	margin: 60px 52px 30px 52px; /*margin-top being combined height of #header */
+	/*margin-top being combined height of #header (110px), + padding as a 18px margin - 9px padding because of the way we handle listing's margins */
 	padding-top: 8px;
+	margin: 110px auto 30px auto;
+	width: 900px;
 }
 
 div.book-listing {
 	float: left;
-	border: 1px solid black;
-	width: 220px;
-	margin: 8px;
+	width: 207px;
+	height: 259px;
+	margin: 9px;
+	
 }
+	
+	div.book-listing-bg {
+		position: absolute;
+		left: -5px; 
+		top: -5px;
+		width: 217px;
+		height: 269px;
+		background: url(browse/listing-bg.png) no-repeat bottom center;
+	}
 	
 	a.book-link {
 		display: block;
@@ -104,25 +281,72 @@ div.book-listing {
 		position: absolute;
 	}
 
-	img.book-pic {
+	div.book-pic {
 		width: 100%;
-		height: 200px;
+		height: 100%;
+		background-repeat: no-repeat;
+		background-position: center top;
+		background-size: 100%, auto;
 	}
 	
 	div.book-info {
-		padding: 10px;
+		position: absolute;
+		bottom: 0px;
+		left: 0px; right: 0px; /* basically width: 100% */
 		line-height: 1.4em;
+		background: white;
+		padding: 10px;
 	}
 	
-	.book-listing h2 { /*title */
-		font-size: 1.5em;
-		line-height: 1.7em;
-	}
+		div.book-info-top {
+			position: absolute;
+			left: -5px;
+			top: -1px;
+			width: 217px;
+			height: 6px;
+			background: url(browse/listing-info-top.png) no-repeat top left;
+		}
+		
+		.book-info h2 {
+			font-family: "HelveticaNeue-CondensedBlack", "HelveticaNeueBlackCondensed", "HelveticaNeue-Black-Condensed", "Helvetica Neue Black Condensed", "HelveticaNeueBlack", "HelveticaNeue-Black", "Helvetica Neue Black", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosCnBold', "Arial Narrow", "Arial", sans-serif; 
+			font-weight:800; 
+			font-stretch:condensed;
+			font-size: 1.27em; /*14px*/
+			line-height: 1.3em;
+		}
+		
+		.book-info h2 a { /* title link */
+			color: #2e2e2e;
+		}
+		
+		.book-info p.book-author {
+			margin-top: 3px;
+			color: #2e2e2e;
+		}
+		
+		.book-info p.book-isbn,
+		.book-info p.book-pub {
+			font-size: 0.909em;
+			color: #8a8a8a;
+			line-height: 1.11em;
+		}
+		
+		.book-info div.book-courses {
+			font-size: 0.909em;
+			color: #2e2e2e;
+			margin-top: 1px;
+		}
+		
+		.book-info div.book-courses a {
+			color: #118f00; /*'not required' color*/
+		}
+		
+		.book-info div.book-courses a.required {
+			color: #900000;
+		}
 	
-	.book-listing h2 a { /* title link */
-		color: #211922;
-		text-decoration: underline;
-	}
+	
+
 
 
 
