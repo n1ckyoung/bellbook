@@ -1,4 +1,37 @@
 <?php
+
+	/**
+	 * generateBookListing generates a listing for a book.
+	 * 
+	 * @access public
+	 * @param array $book
+	 * 			ISBN
+	 *			title
+	 *			author
+	 *			publisher
+	 *			courses
+	 * @return void
+	 */
+	function generateBookListing($book) {
+		return <<<V8B
+	<div class="book-listing">
+		<div class="book-pic" style="background-image: url(http://cc.pbsstatic.com/l/85/5685/9780764585685.jpg)" alt="Image: Shakespeare's Hamlet (Cliffs Complete)"></div>
+		<div class="book-listing-bg"></div>
+		<a class="book-link" href=""></a>
+		<div class="book-info">
+			<div class="book-info-top"></div> <!-- UI stuff -->
+			<h2><a href="">{$book[title]}</a></h2> <!-- book title -->
+			<p class="book-author">by William Shakespeare</p>
+			<p class="book-isbn">ISBN-13: {$book[ISBN]}</p>
+			<p class="book-pub">Pub: Cliffs Notes; 1 edition (May 29, 2000)</p>
+			<div class="book-courses"><a class="required" href="">ELAP</a>, <a class="required" href="">ELAP Acc</a></div>
+			<!--<div class="book-num-offers">2</div>-->
+		</div>
+	</div> <!-- end book-listing -->
+V8B;
+
+	}
+
 	/**
 	 * All listings generated require enclosure using a div tag w/ class item for proper formatting.
 	 * This div tag is usually added alongside the remove/see offers button that goes with listings

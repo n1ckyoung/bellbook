@@ -18,7 +18,6 @@
             if(!$dbSuccess) {
                 die(/*'Failed to connect to database: ' . mysql_error()*/);
             } else {
-                session_start();
             }
         }
         //kills if not logged in

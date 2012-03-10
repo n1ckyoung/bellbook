@@ -93,7 +93,7 @@ div#header {
 		left: 8px;
 		width: 884px;
 		height: 2px;
-		background: url(header/bottom-border.png) repeat-x bottom center;
+		background: url(../images/header/bottom-border.png) repeat-x bottom center;
 	}
 	
 	div#content-area {
@@ -116,7 +116,7 @@ div#header {
 			font-size: 2.2em;
 			font-family: "HelveticaNeue-Light", Helvetica, Arial, sans-serif; 
 			color: #585858;
-			background: url(header/dashed-line.png) repeat-x left bottom;
+			background: url(../images/header/dashed-line.png) repeat-x left bottom;
 			width: 298px;
 		}
 		
@@ -127,7 +127,7 @@ div#header {
 			width: 40px;
 			border: 1px solid #252525;
 			padding: 0; margin: 0;
-			background: url(header/search-icon.png) no-repeat center center;
+			background: url(../images/header/search-icon.png) no-repeat center center;
 		}
 		
 	div#menu-and-options {
@@ -136,7 +136,7 @@ div#header {
 		right: 0px;
 		bottom: 0px;
 		width: 530px;
-		background-image: url(header/left-border.png), url(header/right-border.png);
+		background-image: url(../images/header/left-border.png), url(../images/header/right-border.png);
 		background-repeat: no-repeat, no-repeat;
 		background-position: bottom left, bottom right;
 	}
@@ -207,14 +207,14 @@ div#header {
 					padding-right: 15px;
 					padding-bottom: 7px;
 					padding-left: 6px;
-					background: url(header/drop-down-arrow.png) no-repeat right center;
+					background: url(../images/header/drop-down-arrow.png) no-repeat right center;
 					cursor: pointer;
 				}
 				
 				#menu #profile:hover #profile-link {
 					border: none;
 					/*border-bottom: 1px dashed #67C2B4;*/
-					background: url(header/drop-down-arrow-highlighted.png) no-repeat right center;
+					background: url(../images/header/drop-down-arrow-highlighted.png) no-repeat right center;
 				}
 				
 					#profile ul#profile-nav {
@@ -273,7 +273,7 @@ div.book-listing {
 		top: -5px;
 		width: 217px;
 		height: 269px;
-		background: url(browse/listing-bg.png) no-repeat bottom center;
+		background: url(../images/browse/listing-bg.png) no-repeat bottom center;
 	}
 	
 	a.book-link {
@@ -305,7 +305,7 @@ div.book-listing {
 			top: -1px;
 			width: 217px;
 			height: 6px;
-			background: url(browse/listing-info-top.png) no-repeat top left;
+			background: url(../images/browse/listing-info-top.png) no-repeat top left;
 		}
 		
 		.book-info h2 {
@@ -350,14 +350,14 @@ div#loading {
 	margin: 50px auto 50px auto;
 	width: 884px;
 	height: 40px;
-	background: url(header/bottom-border.png) repeat-x bottom center;
+	background: url(../images/header/bottom-border.png) repeat-x bottom center;
 }
 	
 	#loading-upper-border {
 		position: absolute;
 		top: 0px; left: 0; right: 0;
 		height: 2px;
-		background: url(header/upper-border.png) repeat-x top center;
+		background: url(../images/header/upper-border.png) repeat-x top center;
 	}
 
 	div#animation {
